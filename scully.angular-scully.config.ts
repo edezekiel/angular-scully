@@ -1,4 +1,6 @@
 import { ScullyConfig } from '@scullyio/scully';
+require('scully-plugin-page-title');
+require('scully-plugin-canonical');
 
 /** this loads the default render plugin, remove when switching to something else. */
 
@@ -15,5 +17,6 @@ export const config: ScullyConfig = {
         folder: "./blog"
       }
     },
-  }
+  },
+  defaultPostRenderers: ['setCanonicalLinkPlugin', 'changeTitlePlugin'],
 };
